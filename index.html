@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Stopwatch UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stop watch.css">
+</head>
+<body class="flex justify-center items-center h-screen bg-gradient-to-r from-indigo-900 to-purple-700">
+    <div class="stopwatch-container p-6 rounded-3xl shadow-xl relative bg-indigo-900 w-80 h-auto">
+        <h1 class="text-white text-center text-lg mb-4">STOPWATCH</h1>
+        
+        <!-- Circular Timer Display -->
+        <div class="timer-circle mx-auto bg-gradient-to-br from-indigo-700 to-purple-500 rounded-full p-6 mb-4 flex justify-center items-center relative">
+            <div class="hand"></div>
+            <div id="display" class="text-white text-3xl font-bold tracking-wide">00:00:00</div>
+        </div>
+        
+        <!-- Control Buttons -->
+        <div class="flex justify-around mb-4">
+            <button id="resetBtn" class="px-4 py-2 bg-white text-gray-700 rounded-full shadow-md">RESET</button>
+            <button id="startStopBtn" class="px-4 py-2 bg-yellow-400 text-gray-700 rounded-full shadow-md">START</button>
+            <button id="lapBtn" class="px-4 py-2 bg-pink-500 text-white rounded-full shadow-md">LAP</button>
+        </div>
+        
+        <!-- Laps Display -->
+        <div class="laps-list bg-gradient-to-r from-red-500 to-pink-500 rounded-3xl p-4 text-white shadow-lg">
+            <ul id="lapsList" class="space-y-2">
+                <!-- Lap entries will be added here by JavaScript -->
+            </ul>
+        </div>
+    </div>
+    <script src="stop watch.js"></script>
+</body>
+</html>
