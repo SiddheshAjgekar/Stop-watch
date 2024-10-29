@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b2f; /* Dark navy background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Stopwatch Container */
+.stopwatch-container {
+    background: linear-gradient(135deg, #e43f5a 50%, #1f4068 50%);
+    /* Diagonal gradient: top left half red (#e43f5a), bottom right half dark blue (#1f4068) */
+    border-radius: 1.5rem;
+    padding: 30px;
+    width: 360px;
+    text-align: center;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Circular Timer Styles */
+.timer-circle {
+    width: 160px;
+    height: 160px;
+    background: #1f4068; /* Dark navy color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto 20px;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Hand Animation */
+.hand {
+    width: 3px;
+    height: 70px;
+    background-color: #e43f5a; /* Coral for hand */
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: rotate(0deg);
+    transition: transform 1s linear;
+}
+
+/* Display Text */
+#display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Control Buttons */
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+#startStopBtn {
+    background-color: #1faa9b; /* Soft cyan */
+    color: #ffffff;
+}
+
+#resetBtn {
+    background-color:#1f4068 ; /* Coral */
+    color: #ffffff;
+}
+
+#lapBtn {
+    background-color: #ffbf00; /* Gold for lap button */
+    color: #ffffff;
+}
+
+/* Hover Effects */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Laps List */
+.laps-list {
+    background:#e43f5a; /* Dark navy matching timer circle */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.laps-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.laps-list ul li {
+    font-size: 1rem;
+    padding: 8px;
+    color: #ffffff;
+    background-color: #1faa9b; /* Matching soft cyan */
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
